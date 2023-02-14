@@ -16,29 +16,29 @@ export default function ContributorDetailsExpanded({login, isShown}) {
   if (error) return 'An error has occurred: ' + error.message
 
   const {
-      id,
-      bio,
-      location,
-      name,
-      avatar_url,
-      followers,
-      following,
-    } = data;
+    id,
+    bio,
+    location,
+    name,
+    avatar_url,
+    followers,
+    following,
+  } = data;
   const username = data.login;
 
   if (!isShown) return null
 
   return (
-      <StyledContributorDetails key={id}>
-        <img src={avatar_url} alt="" />
-        <div>
-          <p><span>username: </span>{username}</p>
-          <p><span>name: </span>{name}</p>
-          {location ? <p><span>location: </span> {location}</p> : ""}
-          {bio ? <p><span>bio: </span> {bio} </p> : ""}
-          <p><span>Followers: </span>{followers}</p>
-          <p><span>Following: </span>{following}</p>
-        </div>
-      </StyledContributorDetails>
+    <StyledContributorDetails key={id}>
+      <img src={avatar_url} alt="" />
+      <div>
+        <p><span>username: </span>{username}</p>
+        <p><span>name: </span>{name}</p>
+        {location ? <p><span>location: </span> {location}</p> : ""}
+        {bio ? <p><span>bio: </span> {bio} </p> : ""}
+        <p><span>Followers: </span>{followers}</p>
+        <p><span>Following: </span>{following}</p>
+      </div>
+    </StyledContributorDetails>
   )
 }

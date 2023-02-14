@@ -47,8 +47,8 @@ export default function Contributors() {
                   <span>{login}</span>
                   <span>{contributions} contributions</span>
                   <ShowMore onClick={() => handleSetExpanded(login)}>
-                      <span className={expanded[login] ? 'arrow-up' : 'arrow-down'}/>
-                      <span>{expanded[login] ? 'hide details' : 'show more'}</span>
+                    <span className={expanded[login] ? 'arrow-up' : 'arrow-down'}/>
+                    <span>{expanded[login] ? 'hide details' : 'show more'}</span>
                   </ShowMore>
                 </div>
                 <ContributorDetailsExpanded
